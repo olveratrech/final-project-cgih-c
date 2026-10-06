@@ -24,7 +24,7 @@ El altar está compuesto por **3 niveles** con ofrendas típicas: velas, pan de 
 
 ## Equipo
 
-- Basilio Illescas Andres — Project Owner
+- Basilio Illescas Andres — Product Owner
 - Trejo Olvera Emmanuel — Scrum Master
 - Pérez Olvera Alexis Abraham — Developer
 - Cruz Macedo Samuel Santiago — Developer
