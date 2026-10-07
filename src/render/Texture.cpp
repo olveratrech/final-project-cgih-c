@@ -124,7 +124,11 @@ GLuint CacheTexturas::cubemap(const std::string& carpeta, size_t* bytes) {
         stbi_image_free(px);
         total += static_cast<size_t>(w) * h * 4;
     }
-    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    // Versiones reducidas del cielo para aproximar reflejos borrosos.
+    glGenerateMipmap(GL_TEXTURE_CUBE_MAP);
+    total = total * 4 / 3;
+
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);

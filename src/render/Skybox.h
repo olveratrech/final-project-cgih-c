@@ -17,6 +17,8 @@ public:
     float exposicion = 1.0f;
     bool listo() const { return cubo_ != 0; }
 
+    GLuint textura() const { return cubo_; }
+
 private:
     Shader shader_;
     GLuint vao_ = 0, vbo_ = 0, cubo_ = 0;

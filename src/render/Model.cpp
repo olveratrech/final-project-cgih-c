@@ -152,6 +152,11 @@ bool Modelo::cargar(const std::string& rutaArchivo, CacheTexturas& texturas) {
             mat.rugosidad = pbr.roughness_factor;
             mat.textura = texturaDe(pbr.base_color_texture, d, carpeta, texturas);
         }
+        if (m.has_clearcoat) {
+            mat.capa = m.clearcoat.clearcoat_factor;
+            mat.rugosidadCapa = m.clearcoat.clearcoat_roughness_factor;
+        }
+        
         float fuerza = m.has_emissive_strength ? m.emissive_strength.emissive_strength : 1.0f;
         mat.emision = glm::make_vec3(m.emissive_factor) * fuerza;
         mat.alfa = m.alpha_mode == cgltf_alpha_mode_mask    ? ModoAlfa::Recorte

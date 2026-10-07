@@ -32,6 +32,9 @@ struct Material {
     glm::vec3 emision{0.0f};            // emissiveFactor * emissiveStrength
     float metalico = 0.0f;
     float rugosidad = 1.0f;
+    // Capa transparente del material de Blender.
+    float capa = 0.0f;
+    float rugosidadCapa = 0.0f;
     ModoAlfa alfa = ModoAlfa::Opaco;
     float corte = 0.5f;                  // alphaCutoff para el modo Recorte
     bool dobleCara = false;

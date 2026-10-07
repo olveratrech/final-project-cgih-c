@@ -113,6 +113,10 @@ void Renderer::recolectar(Nodo* n, const glm::vec3& ojo, const glm::vec4& tinteP
 void Renderer::aplicarMaterial(const Shader& s, const Material& m) {
     s.set("uColor", m.color);
     s.set("uEmision", m.emision);
+    s.set("uMetalico", m.metalico);
+    s.set("uRugosidad", m.rugosidad);
+    s.set("uCapa", m.capa);
+    s.set("uRugosidadCapa", m.rugosidadCapa);
     s.set("uModoAlfa", m.alfa == ModoAlfa::Opaco ? 0 : m.alfa == ModoAlfa::Recorte ? 1 : 2);
     s.set("uCorte", m.corte);
     s.set("uEscalaUV", m.escalaUV);
@@ -185,6 +189,17 @@ void Renderer::dibujar(Nodo* raiz, const Camara& camara, int ancho, int alto, co
     }
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+    const bool hayEntorno = cielo && cielo->listo();
+
+    // La unidad 0 queda para las texturas de los modelos.
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(
+        GL_TEXTURE_CUBE_MAP,
+        hayEntorno ? cielo->textura() : 0
+    );
+    glEnable(GL_TEXTURE_CUBE_MAP_SEAMLESS);
+    glActiveTexture(GL_TEXTURE0);
+
     for (const Shader* s : {&shader_, &shaderInst_}) {
         s->usar();
         s->set("uVistaProy", vistaProy_);
@@ -198,6 +213,12 @@ void Renderer::dibujar(Nodo* raiz, const Camara& camara, int ancho, int alto, co
         float densidad = luz.densidadNiebla / (1.0f + std::max(ojo_.y, 0.0f) / 15.0f);
         s->set("uDensidadNiebla", niebla ? densidad : 0.0f);
         s->set("uTextura", 0);
+        s->set("uEntorno", 1);
+        s->set("uTieneEntorno", hayEntorno ? 1 : 0);
+        s->set(
+            "uExposicionEntorno",
+            hayEntorno ? cielo->exposicion : 1.0f
+        );
         s->set("uAlambre", alambre ? 1 : 0);
         s->set("uColorAlambre", glm::vec3(0.98f, 0.62f, 0.18f));
     }
