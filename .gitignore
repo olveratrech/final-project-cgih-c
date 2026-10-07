@@ -1,0 +1,23 @@
+# Compilación
+build/
+build-*/
+out/
+.vs/
+*.exe
+*.obj
+*.pdb
+*.ilk
+
+# Archivos generados al ejecutar
+registro.txt
+imgui.ini
+cempasuchil_*.png
+
+# Blender: respaldos y vistas previas regenerables
+*.blend1
+*.blend2
+Modelado/render/
+
+# Python
+__pycache__/
+*.pyc
