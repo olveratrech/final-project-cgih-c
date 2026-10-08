@@ -1,13 +1,12 @@
 {
 	"asset":{
-		"copyright":"Equipo Camino de Cempas\u00fachil - FI UNAM",
 		"generator":"Khronos glTF Blender I/O v5.2.40",
 		"version":"2.0"
 	},
 	"scene":0,
 	"scenes":[
 		{
-			"name":"Scene",
+			"name":"Base_Petalo",
 			"nodes":[
 				0
 			]
@@ -16,13 +15,24 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"petalo_cempasuchil"
+			"name":"petalo_cempashucil",
+			"rotation":[
+				0.05373002588748932,
+				0,
+				0,
+				0.998555600643158
+			],
+			"translation":[
+				0,
+				0.0017531102057546377,
+				0
+			]
 		}
 	],
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"cempasuchil_petalo",
+			"name":"Petalo_Cempasuchil",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
 					"index":0
@@ -34,7 +44,7 @@
 	],
 	"meshes":[
 		{
-			"name":"petalo_cempasuchil",
+			"name":"Malla_Petalo_Base",
 			"primitives":[
 				{
 					"attributes":{
@@ -57,7 +67,7 @@
 	"images":[
 		{
 			"mimeType":"image/png",
-			"name":"petalo_cempasuchil.png",
+			"name":"petalo_cempasuchil",
 			"uri":"../../textures/petalo_cempasuchil.png"
 		}
 	],
@@ -65,10 +75,10 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":9,
+			"count":30,
 			"max":[
 				0.012000000104308128,
-				0.00800000037997961,
+				0.003421999979764223,
 				0.01600000075995922
 			],
 			"min":[
@@ -81,45 +91,45 @@
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":9,
+			"count":30,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":9,
+			"count":30,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
 			"componentType":5123,
-			"count":24,
+			"count":120,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":108,
+			"byteLength":360,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":108,
-			"byteOffset":108,
+			"byteLength":360,
+			"byteOffset":360,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":72,
-			"byteOffset":216,
+			"byteLength":240,
+			"byteOffset":720,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":48,
-			"byteOffset":288,
+			"byteLength":240,
+			"byteOffset":960,
 			"target":34963
 		}
 	],
@@ -131,7 +141,7 @@
 	],
 	"buffers":[
 		{
-			"byteLength":336,
+			"byteLength":1200,
 			"uri":"petalo_cempasuchil.bin"
 		}
 	]
