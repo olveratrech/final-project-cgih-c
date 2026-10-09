@@ -1,35 +1,75 @@
 {
 	"asset":{
-		"copyright":"Equipo Camino de Cempas\u00fachil - FI UNAM",
 		"generator":"Khronos glTF Blender I/O v5.2.40",
 		"version":"2.0"
 	},
 	"scene":0,
 	"scenes":[
 		{
-			"name":"Scene",
+			"name":"Arco_Florido_Editable",
 			"nodes":[
-				1
+				3
 			]
 		}
 	],
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"flores"
+			"name":"flores",
+			"rotation":[
+				0.4937724769115448,
+				0.4589375853538513,
+				0.6281051635742188,
+				0.38865038752555847
+			],
+			"scale":[
+				1.4944226741790771,
+				1.4944229125976562,
+				1.4944226741790771
+			],
+			"translation":[
+				-0.46244075894355774,
+				2.2703816890716553,
+				0.06052460893988609
+			]
+		},
+		{
+			"mesh":1,
+			"name":"follaje",
+			"rotation":[
+				0.6812693476676941,
+				-0.18939973413944244,
+				-0.18939971923828125,
+				0.6812691688537598
+			],
+			"scale":[
+				1.189826250076294,
+				1.189826250076294,
+				1.1898263692855835
+			],
+			"translation":[
+				0.31386101245880127,
+				2.605379343032837,
+				-0.004999999888241291
+			]
+		},
+		{
+			"mesh":2,
+			"name":"marco"
 		},
 		{
 			"children":[
-				0
+				0,
+				1,
+				2
 			],
-			"mesh":1,
-			"name":"arco_cempasuchil"
+			"name":"Arco_Raiz"
 		}
 	],
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"cempasuchil_petalo",
+			"name":"Petalo_Cempasuchil",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
 					"index":0
@@ -40,19 +80,13 @@
 		},
 		{
 			"doubleSided":true,
-			"name":"mano_de_leon",
+			"name":"Hoja_Cempasuchil",
 			"pbrMetallicRoughness":{
-				"baseColorFactor":[
-					0.5394794940948486,
-					0.009134058840572834,
-					0.10461648553609848,
-					1
-				],
 				"baseColorTexture":{
 					"index":1
 				},
 				"metallicFactor":0,
-				"roughnessFactor":0.699999988079071
+				"roughnessFactor":0.6499999761581421
 			}
 		},
 		{
@@ -74,7 +108,7 @@
 	],
 	"meshes":[
 		{
-			"name":"flores",
+			"name":"Cabeza_ligera_compartida.023",
 			"primitives":[
 				{
 					"attributes":{
@@ -84,7 +118,12 @@
 					},
 					"indices":3,
 					"material":0
-				},
+				}
+			]
+		},
+		{
+			"name":"Rama_hojas_compartida.068",
+			"primitives":[
 				{
 					"attributes":{
 						"POSITION":4,
@@ -118,22 +157,27 @@
 		},
 		{
 			"sampler":0,
-			"source":0
+			"source":1
 		},
 		{
 			"sampler":0,
-			"source":1
+			"source":2
 		}
 	],
 	"images":[
 		{
 			"mimeType":"image/png",
-			"name":"petalo_cempasuchil.png",
+			"name":"petalo_cempasuchil",
 			"uri":"../../textures/petalo_cempasuchil.png"
 		},
 		{
+			"mimeType":"image/png",
+			"name":"hoja_cempasuchil_color",
+			"uri":"../../textures/hoja_cempasuchil_color.png"
+		},
+		{
 			"mimeType":"image/jpeg",
-			"name":"madera_clara.jpg",
+			"name":"madera_clara",
 			"uri":"../../textures/madera_clara.jpg"
 		}
 	],
@@ -141,69 +185,69 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":9129,
+			"count":419672,
 			"max":[
-				1.4571735858917236,
-				2.6513562202453613,
-				0.15897029638290405
+				0.30280622839927673,
+				0.49120819568634033,
+				1.2268117666244507
 			],
 			"min":[
-				-1.452879548072815,
-				0.13311724364757538,
-				-0.12084070593118668
+				-1.718225359916687,
+				-0.18017764389514923,
+				-0.9648645520210266
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":9129,
+			"count":419672,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":9129,
+			"count":419672,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
-			"componentType":5123,
-			"count":21114,
+			"componentType":5125,
+			"count":1261524,
 			"type":"SCALAR"
 		},
 		{
 			"bufferView":4,
 			"componentType":5126,
-			"count":561,
+			"count":38368,
 			"max":[
-				1.4846893548965454,
-				2.666625499725342,
-				0.07480518519878387
+				2.1197268962860107,
+				0.0021784058772027493,
+				2.7646594047546387
 			],
 			"min":[
-				-1.483335018157959,
-				0.19776485860347748,
-				-0.03729226440191269
+				-1.063660740852356,
+				-0.0015558175509795547,
+				-0.30998939275741577
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":5,
 			"componentType":5126,
-			"count":561,
+			"count":38368,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":6,
 			"componentType":5126,
-			"count":561,
+			"count":38368,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":7,
 			"componentType":5123,
-			"count":1836,
+			"count":120384,
 			"type":"SCALAR"
 		},
 		{
@@ -244,74 +288,74 @@
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":109548,
+			"byteLength":5036064,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":109548,
-			"byteOffset":109548,
+			"byteLength":5036064,
+			"byteOffset":5036064,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":73032,
-			"byteOffset":219096,
+			"byteLength":3357376,
+			"byteOffset":10072128,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":42228,
-			"byteOffset":292128,
+			"byteLength":5046096,
+			"byteOffset":13429504,
 			"target":34963
 		},
 		{
 			"buffer":0,
-			"byteLength":6732,
-			"byteOffset":334356,
+			"byteLength":460416,
+			"byteOffset":18475600,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":6732,
-			"byteOffset":341088,
+			"byteLength":460416,
+			"byteOffset":18936016,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":4488,
-			"byteOffset":347820,
+			"byteLength":306944,
+			"byteOffset":19396432,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":3672,
-			"byteOffset":352308,
+			"byteLength":240768,
+			"byteOffset":19703376,
 			"target":34963
 		},
 		{
 			"buffer":0,
 			"byteLength":2244,
-			"byteOffset":355980,
+			"byteOffset":19944144,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":2244,
-			"byteOffset":358224,
+			"byteOffset":19946388,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":1496,
-			"byteOffset":360468,
+			"byteOffset":19948632,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":1776,
-			"byteOffset":361964,
+			"byteOffset":19950128,
 			"target":34963
 		}
 	],
@@ -323,7 +367,7 @@
 	],
 	"buffers":[
 		{
-			"byteLength":363740,
+			"byteLength":19951904,
 			"uri":"arco_cempasuchil.bin"
 		}
 	]
